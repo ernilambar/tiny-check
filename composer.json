@@ -1,0 +1,23 @@
+{
+  "name": "ernilambar/tiny-check",
+  "description": "Simple addon for Plugin Check.",
+  "license": "GPL-2.0-or-later",
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=7.2.24",
+    "ernilambar/coding-standard": "0.1.1"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "ergebnis/composer-normalize": true
+    },
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "7.2.24"
+    },
+    "sort-packages": true
+  }
+}
