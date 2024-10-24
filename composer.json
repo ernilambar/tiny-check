@@ -5,7 +5,7 @@
   "type": "wordpress-plugin",
   "require": {
     "php": ">=7.2.24",
-    "ernilambar/coding-standard": "0.1.1"
+    "ernilambar/coding-standard": "^0.1"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,

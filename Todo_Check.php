@@ -22,6 +22,10 @@ class Todo_Check extends Abstract_PHP_CodeSniffer_Check {
 			'extensions'  => 'php',
 			'standard'    => 'NilambarCodingStandard',
 			'sniffs'      => 'NilambarCodingStandard.Commenting.TodoComment',
+			'installed_paths' => [
+				TINY_CHECK_DIR . '/vendor/ernilambar/coding-standard',
+				WP_PLUGIN_CHECK_PLUGIN_DIR_PATH . 'vendor/wp-coding-standards/wpcs',
+			],
 		);
 	}
 
