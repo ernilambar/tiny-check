@@ -5,7 +5,8 @@
   "type": "wordpress-plugin",
   "require": {
     "php": ">=7.2.24",
-    "ernilambar/coding-standard": "^0.1"
+    "ernilambar/coding-standard": "^0.1",
+		"phpcompatibility/php-compatibility": "dev-develop"
   },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^1",
