@@ -1,0 +1,7 @@
+default:
+  suites:
+    default:
+      contexts:
+        - Nilambar\Tiny_Check\Behat_Utils\FeatureContext
+      paths:
+        - tests/behat/features

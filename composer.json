@@ -7,8 +7,19 @@
     "php": ">=7.2.24",
     "ernilambar/coding-standard": "^0.1"
   },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^1",
+    "wp-cli/extension-command": "^2",
+    "wp-cli/wp-cli": "^2.11",
+    "wp-cli/wp-cli-tests": "^4.3"
+  },
   "minimum-stability": "dev",
   "prefer-stable": true,
+  "autoload-dev": {
+    "psr-4": {
+      "Nilambar\\Tiny_Check\\Behat_Utils\\": "tests/behat/includes"
+    }
+  },
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
@@ -19,5 +30,12 @@
       "php": "7.2.24"
     },
     "sort-packages": true
+  },
+  "scripts": {
+    "behat": "BEHAT_FEATURES_FOLDER=tests/behat/features run-behat-tests",
+    "behat-rerun": "BEHAT_FEATURES_FOLDER=tests/behat/features rerun-behat-tests",
+    "format": "@php ./vendor/bin/phpcbf --report-full --report-summary",
+    "lint": "@php ./vendor/bin/phpcs --report-full --report-summary",
+    "prepare-behat-tests": "install-package-tests"
   }
 }
