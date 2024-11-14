@@ -39,9 +39,10 @@ Feature: Basic checks
        * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
        */
 
-			 // TODO: Needs some refinement.
-			 $var = 1;
-
+      // TODO: Needs some refinement.
+      function wp_test() {
+        $country = $session?->user?->getAddress()?->country;
+      }
       """
     And a wp-content/plugins/foo-sample/README.md file:
       """
@@ -63,4 +64,8 @@ Feature: Basic checks
     Then STDOUT should contain:
 	    """
 	    NilambarCodingStandard.Commenting.TodoComment.Found,WARNING,5
+	    """
+    And STDOUT should contain:
+	    """
+	    PHPCompatibility.Operators.NewOperators.t_nullsafe_object_operatorFound,ERROR,5
 	    """

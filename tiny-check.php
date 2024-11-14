@@ -30,11 +30,13 @@ add_filter(
 	'wp_plugin_check_checks',
 	function ( array $checks ) {
 		require_once TINY_CHECK_DIR . '/Todo_Check.php';
+		require_once TINY_CHECK_DIR . '/PHP_Compat_Check.php';
 
 		return array_merge(
 			$checks,
 			[
-				'todo' => new Todo_Check(),
+				'todo'       => new Todo_Check(),
+				'php_compat' => new PHP_Compat_Check(),
 			]
 		);
 	}
