@@ -33,9 +33,9 @@ add_filter(
 
 		return array_merge(
 			$checks,
-			array(
+			[
 				'todo' => new Todo_Check(),
-			)
+			]
 		);
 	}
 );
